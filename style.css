@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", sans-serif;
+    box-sizing: border-box;
+}
+.cart-items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px 0;
+}
+body{
+    background-color: rgb(244, 244, 244);
+}
+.container{
+    width: 70%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.179);
+}
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-title{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.remove-all,.remove{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 2px solid white;
+}
+.remove-all:hover,.remove:hover{
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+}
+.cart-img{
+    min-width: 60px;
+    max-width: 150px;
+    height: 150px;
+    width: 100%;
+}
+.cart-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.352);
+    padding: 20px 0;
+}
+p{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+.icon{
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+}
+.icon:hover{
+    color: red;
+}
+.sub-item, .add-item{
+    border: none;
+    padding:5px 10px;
+    background-color: rgba(128, 128, 128, 0.537);
+    color: white;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.sub-item:hover, .add-item:hover{
+    border: 1px solid rgba(128, 128, 128, 0.371);
+    background-color: rgba(128, 128, 128, 0.312);
+}
+.quantity{
+    width: 12px;
+}
+.events-group{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.cart-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.total-price{
+    padding-left: 20px;
+    border-left: 1px solid rgba(128, 128, 128, 0.572);
+    width:400px;
+}
+#validate{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 2px solid white;
+}
+#validate:hover{
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+}
+#cancel{
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.537);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 2px solid white;
+}
+#cancel:hover{
+    border: 2px solid rgba(128, 128, 128, 0.537);
+    color: rgba(128, 128, 128, 0.537);
+    background-color: white;
+}
+
+.price{
+    width:50px;
+}
+
+.boxValidation{
+    background-color: white;
+    width: 50%;
+    height: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.526);
+    color: green;
+    text-align: center;
+    margin: 100px auto;
+    border-radius: 5px;
+}
+.boxValidation h1,.boxCancel h1{
+    padding-top: 50px;
+    font-size: 30px;
+    line-height: 2;
+}
+.boxCancel{
+    background-color: white;
+    width: 50%;
+    height: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.526);
+    color: red;
+    text-align: center;
+    margin: 100px auto;
+    border-radius: 5px;
+}
+
+@media (max-width:768px){
+    .container{
+        width: 95%;
+    }
+    .cart-item{
+        justify-content: center;
+        gap: 10px;
+    }
+    .events-group{
+        gap: 5px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .cart-title,.total-price{
+        font-size: 20px;
+    }
+    #validate,#cancel,.remove,.remove-all{
+        font-size: 12px;
+        padding: 7px;
+    }
+    .sub-item, .add-item{
+        padding:3px 5px;
+    }
+}
